@@ -1,0 +1,119 @@
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/require.js"></script>
+    <script type="text/javascript" src="js/codebird-js/codebird.js"></script>
+    <script type="text/javascript" src="js/easyModal/jquery.easyModal.js"></script>
+    <script type='text/javascript' src="js/app.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" href="#">Post Voice</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#about">Sobre</a>
+                </li>
+                <li><a href="#ihc">IHC</a>
+                </li>
+                <li><a href="#contact">Contato</a>
+                </li>
+                <li><a href="#close" onclick="window.close() ">Fechar</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="row txt-row">
+                <header class="text-center">
+                    <h1>Fale o que deseja pesquisar ou postar!</h1>
+                </header>
+                <textarea id="txt-area"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button id="recorder" class="btn btn-success btn-lg">
+                        <img id="start" class="small-icon" src="http://findicons.com/files/icons/1580/devine_icons_part_2/128/mic.png"/>
+                    </button>
+                    <button id="stopper" class="btn btn-danger btn-lg">
+                        <img class="small-icon" src="http://findicons.com/files/icons/1676/primo/128/button_black_stop.png" />
+                    </button>
+                    <button id="clear" class="btn btn-danger btn-lg">
+                        <span class="glyphicon glyphicon-trash" style="font-size: 25px"></span>
+                    </button>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Autorizar postagem no twitter</h2>
+
+                    <button id="twitter" class="btn btn-info btn-lg">
+                        <img class="small-icon" src ="http://findicons.com/files/icons/855/web_social/128/twitter2.png"/>
+                    </button>
+
+                    <div id="PIN-wrapper">
+                        <label for="PIN">Insira o PIN:</label>
+                        <input type="text" name="PIN" id="PIN"/>
+                        <button class="btn btn-xs" id="PIN-submit">OK</button>
+                    </div>
+
+                    <div id="twitter-authorized-msg">
+                        Autorizado com sucesso! Agora o comando de voz "postar no twitter" está habilitado.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <h4>Comandos de voz disponíveis</h4>
+            <ul>
+                <li>vírgula (,)</li>
+                <li>ponto final (.)</li>
+                <li>ponto de exclamação (!)</li>
+                <li>ponto de interrogação (?)</li>
+                <li>arroba (@)</li>
+                <li>hashtag (#)</li>
+                <li>limpar texto (limpa a caixa de texto)</li>
+                <li>parar gravação (para a gravação de voz)</li>
+                <li>pesquisar no google (pesquisa o que foi dito no google)</li>
+                <li>postar no twitter (posta o que foi dito no twitter)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="tweet-modal">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center tw-modal">
+        <button class="btn btn-danger btn-sm" id="modal-close"><span class="glyphicon glyphicon-remove"></span></button>
+        <h3>
+            Postado com sucesso!
+        </h3>
+        <ul id="tweet-list">
+            <blockquote class="twitter-tweet" lang="en" id="tweet-blockquote">
+                <p id="tweet-message"></p>
+                <span id="tweet-user"></span>
+                <br/>
+            </blockquote>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </ul>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+</body>
+</html>

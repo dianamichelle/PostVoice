@@ -1,0 +1,43 @@
+.small-icon {
+    height: 25px;
+    width: 25px;
+}
+.rounded {
+    border-radius: 25%;
+}
+#stopper {
+    display: none;
+}
+#txt-area {
+    width: 100%;
+    min-height: 200px;
+    resize: none;
+}
+.txt-row {
+    margin-bottom: 50px;
+}
+.btn-lg {
+    width: 120px;
+    height: 60px;
+}
+body {
+    padding-top: 70px;
+}
+
+#PIN-wrapper {
+    margin-top: 10px;
+}
+
+.tw-modal {
+    background-color: white;
+    padding-top: 10px;
+    min-width: 400px;
+    -webkit-box-shadow: 0 10px 21px 0 rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0 10px 21px 0 rgba(50, 50, 50, 0.75);
+    box-shadow:         0 10px 21px 0 rgba(50, 50, 50, 0.75);
+}
+
+#modal-close {
+    position: relative;
+    left: 170px;
+}
